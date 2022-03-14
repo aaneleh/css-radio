@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            width: 5em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .container div{
+            display: flex;
+            position: relative;
+            z-index: 100;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container::after{
+            content: '';
+            position: absolute;
+            top: 1.55em;
+            z-index: -1;
+            background:black;
+            height: 1.5em;
+            width: 5em;
+            border-radius: 1em;
+        }
+        input {
+            height: 1.25em;
+            width: 1.25em;
+            -webkit-appearance: none;
+            border-radius: 1em;
+        }
+        input:checked {
+            visibility: visible;
+            background-color: white;
+            -webkit-appearance: none;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div>
+            <label>1</label>
+            <input type="radio" name="drone" value="1" checked>
+        </div>
+        <div>
+            <label>2</label>
+            <input type="radio" name="drone" value="2">
+        </div>
+        <div>
+            <label>3</label>
+            <input type="radio" name="drone" value="3">
+        </div>
+    </div>
+
+</body>
+</html>
